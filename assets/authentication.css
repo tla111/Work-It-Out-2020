@@ -1,20 +1,85 @@
-  .form_container {
-    height: 100vh;
-    max-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+/* Homepage */
+body {
+  background-color: black;
+}
+
+.register_title {
+  /* border: 1px solid red; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  background: url(./images/lightning.gif);
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.boxes_container {
+  /* border: 1px solid white; */
+  margin: 0 auto;
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+}
+
+.box {
+  border: 3px solid white;
+  height: 70vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box_left {
+  background-image: url('./images/readyToWork.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Login Form */
+.form_container {
+  /* border: 1px solid red; */
+  height: 68vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+form {
+  width: 50%;
+}
+.form_buttons {
+  margin-top: 7px;
+  width: 100%;
+}
+
+.form_buttons a:link,
+.form_buttons a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+label {
+  color: white;
+  font-size: 22px;
+}
+
+/* Small Screen */
+@media (max-width: 812px) {
+  .register_title {
+    font-size: 60px;
+  }
+  .box_left {
+    display: none;
   }
   form {
-    width: 50%;
+    width: 100%;
   }
-  .log_button {
-    margin-top: 15px;
-  }
-  .reg_button {
-    position: absolute;
-    top: 56.9%;
-    left: 30.5%;
-  }
+}

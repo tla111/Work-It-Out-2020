@@ -6,4 +6,4 @@ from .models import WorkoutUser
 
 def index_view(request):
     name = 'Tim'
-    return render(request, 'index.html', {'name': name})
+    return render(request, 'profile.html', {'name': name})

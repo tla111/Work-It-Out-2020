@@ -20,9 +20,9 @@ from authentication.views import login_view, logout_view
 from workoutuser.views import index_view
 
 urlpatterns = [
-    path('', index_view, name='homepage'),
-    path('login/', login_view, name='login'),
+    path('', login_view, name='login'),
     path('logout/', logout_view),
+    path('/profile', index_view, name='profile'),
     path('admin/', admin.site.urls),
 ]
 

@@ -14,9 +14,9 @@ def login_view(request):
                 request, username=data['username'], password=data['password'])
             if user:
                 login(request, user)
-                return HttpResponseRedirect(reverse('homepage'))
+                return HttpResponseRedirect(reverse('profile'))
     form = LoginForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'homepage.html', {'form': form})
 
 
 def logout_view(request):
