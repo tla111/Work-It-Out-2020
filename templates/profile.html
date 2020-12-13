@@ -15,6 +15,8 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="{% static 'profile.css' %}" />
     <link rel="stylesheet" href="{% static 'user_info.css' %}" />
@@ -28,7 +30,6 @@
 
 
     <div class='profile_screen'>
-
     <div class='userinfo_container'>
       <div class="card" id="cardPage">
       <div class="card_side card_side_front">
@@ -86,9 +87,63 @@
         </div>
       </div>
     </div><!--User Info Container-->
-
-
     </div><!--Profile Screen-->
+
+
+    <div class='bmi_level_container'>
+       <h1 class='bmi_level_header'>
+          Your Workout Plan According to Your BMI Level
+        </h1>
+
+        <div class='bmi_container'>
+        <div class='boxes' id='box1'>
+          <h2 class='bmiLevel_header'>Underweight</h2>
+          <i class="fas fa-utensils bmiIcons"></i>
+          <ul>
+            <li>Eat 5 Meals a Day</li>
+            <li>Lift 4x Times a Week</li>
+            <li>50 Push-Ups Daily</li>
+            <li>75 Squats Every Other Day</li>
+            <li>Abs Exercises Every Other Day</li>
+          </ul>
+        </div>
+        <div class='boxes' id='box2'>
+          <h2 class='bmiLevel_header'>Healthy Weight</h2>
+           <i class="fas fa-utensils bmiIcons"></i>
+          <ul>
+            <li>Eat 3 Meals a Day</li>
+            <li>Lift 3x Times a Week</li>
+            <li>25 Push-Ups Daily</li>
+            <li>50 Squats Every Other Day</li>
+            <li>Abs Exercises Every Other Day</li>
+          </ul>
+        </div>
+        <div class='boxes' id='box3'>
+          <h2 class='bmiLevel_header'>Overweight</h2>
+           <i class="fas fa-utensils bmiIcons"></i>
+          <ul>
+            <li>Eat 2 Big Meals a Day</li>
+            <li>Lift 3x Times a Week</li>
+            <li>Run 1/2 a Mile Every Morning</li>
+            <li>Swim Every Other Day</li>
+            <li>Abs Exercises Every Other Day</li>
+          </ul>
+        </div>
+        <div class='boxes' id='box4'>
+          <h2 class='bmiLevel_header'>Obese</h2>
+           <i class="fas fa-utensils bmiIcons"></i>
+          <ul>
+            <li>Eat 2 Meals a Day</li>
+            <li>Lift 3x Times a Week</li>
+            <li>Run 1 a Mile Every Morning</li>
+            <li>Swim Every Day</li>
+            <li>Abs Exercises Every Other Day</li>
+          </ul>
+        </div>
+      </div>
+    </div><!--BMI Level Container-->
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
