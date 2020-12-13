@@ -22,7 +22,7 @@ from workoutuser.views import index_view
 urlpatterns = [
     path('', login_view, name='login'),
     path('logout/', logout_view),
-    path('/profile', index_view, name='profile'),
+    path('profile', index_view, name='profile'),
     path('admin/', admin.site.urls),
 ]
 

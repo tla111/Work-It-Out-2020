@@ -16,26 +16,37 @@
     />
 
 
-    <link rel="stylesheet" href="{% static 'profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'user_info.css' %}" />
 
-    <title>Profile</title>
   </head>
   <body>
 
-    {% include "navigation.html" %}
+    <div class='card' id='cardPage'>
+      <div class='card_side card_side_front'>
+        <div class='card_picture card_picture-3'></div>
+        <h4 class='card_heading'>
+          <span class='card_heading_span heading_span_goals'>
+            My Goals
+          </span>
+        </h4>
+        <div class='card_details'>
+          <ul class='goalList'>
+            <li>Goal 1: {goals.goal1}</li>
+            <li>Goal 2: {goals.goal2}</li>
+            <li>Goal 3: {goals.goal3}</li>
+            <li>Goal 4: {goals.goal4}</li>
+            <li>Goal 5: {goals.goal5}</li>
+          </ul>
+        </div>
+      </div>
+      <div class='card_side card_side_back card_side_back-1'>
+        <div class='card_container'>
+          <a href='#popup2' class='btn btn-white'>
+            Update Goals
+          </a>
+        </div>
+      </div>
 
-
-    <div class='profile_screen'>
-
-    <div class='userinfo_container'>
-      {% include "userinfo.html" %}
-      {% include "motivationpic.html" %}
-      {% include "goals.html" %}
-
-    </div>
-
-
-    </div><!--Profile Screen-->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

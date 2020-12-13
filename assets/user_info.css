@@ -1,0 +1,177 @@
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+}
+
+.btn-white:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-blue {
+  background-color: dodgerblue;
+  color: white;
+  border: 1px solid black;
+}
+
+.btn-red {
+  background-color: crimson;
+  color: white;
+  border: 1px solid black;
+}
+
+.btn-blue:hover,
+.btn-red:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 525px;
+  margin-right: 375px;
+}
+.card_side {
+  color: black;
+  margin-left: 20px;
+  height: 525px;
+  width: 325px;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card_side_front {
+  background-color: whitesmoke;
+}
+.card_side_back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_side_back-1 {
+  background-image: linear-gradient(to right bottom, black, gray);
+}
+.card:hover .card_side_front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card_side_back {
+  transform: rotateY(0);
+}
+.card_picture {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card_picture-1 {
+  background-image: url('./images/weights.jpeg');
+}
+.card_picture-2 {
+  background-image: url('./images/intense.jpeg');
+}
+
+.card_picture-3 {
+  background-image: url('./images/gymEquipment.jpeg');
+}
+
+.card_heading {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: black;
+  position: absolute;
+  top: 115px;
+  left: 125px;
+}
+.card_heading_span {
+  padding: 7px;
+  background-image: linear-gradient(to right bottom, white, gray);
+}
+.card_details ul {
+  list-style: none;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.card_details ul li {
+  text-align: center;
+  font-size: 19px;
+  padding: 10px;
+}
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid #dfdcdc;
+}
+.card_container {
+  height: 400px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* .profileUpdate {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.profileUpdate input {
+  border: 2px solid black;
+  margin: 5px;
+  width: 200px;
+  height: 40px;
+} */
+
+.getProfileContainer {
+  border: 1px solid black;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.goalList {
+  margin-top: 50px !important;
+}
+
+.heading_span_goals {
+  margin-left: 20px;
+}
+
+.small_text {
+  margin-left: 143px;
+}
