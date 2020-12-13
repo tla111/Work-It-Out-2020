@@ -28,17 +28,18 @@
             <span class='card_heading_span'>My Profile</span>
           </h4>
           <div class='card_details'>
+          {% comment %} {% for user in workout_user%} {% endcomment %}
             <ul>
-              <li>Full Name:</li>
-              <li>Username:</li>
-              <li>Age:</li>
-              <li>Height:</li>
-              <li>Weight:</li>
-              <li>Fitness Level: </li>
+              <li>Username: {{user.username}}</li>
+              <li>Age: {{user.age}}</li>
+              <li>Height: {{user.weight}}</li>
+              <li>Weight: {{user.height}}</li>
+              <li>Fitness Level: {{user.fitness_level}} </li>
               <li>
                 BMI Level:
               </li>
             </ul>
+          {% comment %} {% endfor %} {% endcomment %}
           </div>
         </div>
         <div class='card_side card_side_back card_side_back-1'>
