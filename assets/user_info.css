@@ -176,6 +176,8 @@
   margin-left: 20px;
 }
 
-.small_text {
-  margin-left: 143px;
+.flip_info {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
 }

@@ -43,9 +43,10 @@
             <li>Height: {{user.height}}</li>
             <li>Weight: {{user.weight}}</li>
             <li>Fitness Level: {{user.fitness_level}}</li>
-            <li>BMI Level: {{name}}</li>
+            <li id='bmi_level'>BMI Level: </li>
           </ul>
         </div>
+        <small class='flip_info'>Hover Over Card to Update Profile</small>
       </div>
       <div class="card_side card_side_back card_side_back-1">
         <div class="card_container">
@@ -75,12 +76,10 @@
             <li>Goal 5: {{goals.goal_five}}</li>
           </ul>
         </div>
+        <small class='flip_info'>Hover Over Card to Update Goals</small>
       </div>
       <div class='card_side card_side_back card_side_back-1'>
         <div class='card_container goals_buttons_container'>
-          <a href='/add_goals/' class='btn btn-blue create_goals_button'>
-            Create Goals
-          </a>
           <a href='/update_goals/' class='btn btn-white'>
             Update Goals
           </a>

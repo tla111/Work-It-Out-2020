@@ -23,8 +23,8 @@ urlpatterns = [
     path('', login_view, name='login'),
     path('logout/', logout_view),
     path('profile/', profile_view, name='profile'),
-    path('update_user/', update_profile_view, name='update_user'),
     path('add_user/', add_user_profile_view, name='add_user'),
+    path('update_user/', update_profile_view, name='update_user'),
     path('update_goals/', update_goals_view, name='update_goals'),
     path('admin/', admin.site.urls),
 ]
