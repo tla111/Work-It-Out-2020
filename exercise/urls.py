@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from authentication.views import login_view, logout_view
-from workoutuser.views import profile_view, add_user_view, user_info_view, update_profile_view
+from workoutuser.views import profile_view, add_user_view, user_info_view, update_profile_view, add_goals_view
 
 urlpatterns = [
     path('', login_view, name='login'),
@@ -25,7 +25,8 @@ urlpatterns = [
     path('profile/', profile_view, name='profile'),
     path('user_info/', user_info_view, name='user_info'),
     path('update_user/', update_profile_view, name='update_user'),
-    path('adduser/', add_user_view, name='adduser'),
+    path('adduser/', add_user_view, name='add_user'),
+    path('addgoals/', add_goals_view, name='user_goals'),
     path('admin/', admin.site.urls),
 ]
 

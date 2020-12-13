@@ -1,7 +1,7 @@
 from django.shortcuts import render, reverse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from .models import WorkoutUser
-from .forms import AddUserForm, UpdateUserForm
+from .models import WorkoutUser, UserGoals
+from .forms import AddUserForm, UpdateUserForm, AddUserGoals
 # Create your views here.
 
 
@@ -45,3 +45,23 @@ def update_profile_view(request):
 def user_info_view(request):
     workout_user = WorkoutUser.objects.get(username=request.user)
     return render(request, 'userinfo.html', {"workout_user": workout_user})
+
+
+@login_required()
+def add_goals_view(request):
+    if request.method == 'POST':
+        form = AddUserGoals(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            new_goals = UserGoals.objects.create(
+                goal_one=data['goal_one'],
+                goal_two=data['goal_two'],
+                goal_three=data['goal_three'],
+                goal_four=data['goal_four'],
+                goal_five=data['goal_five'],
+                workout_user=request.user
+            )
+            return HttpResponseRedirect(reverse('profile'))
+
+    form = AddUserGoals()
+    return render(request, 'generic_form.html', {'form': form})

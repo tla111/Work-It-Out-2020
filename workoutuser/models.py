@@ -20,3 +20,16 @@ class WorkoutUser(AbstractUser):
 
   def __str__(self):
     return f"{self.username}"
+
+
+class UserGoals(models.Model):
+    workout_user = models.ForeignKey(
+        WorkoutUser, on_delete=models.CASCADE, null=True)
+    goal_one = models.CharField(max_length=200)
+    goal_two = models.CharField(max_length=200)
+    goal_three = models.CharField(max_length=200)
+    goal_four = models.CharField(max_length=200)
+    goal_five = models.CharField(max_length=200)
+
+    def __str__(self):
+        return f"{self.goal_one}"
