@@ -34,7 +34,7 @@ def add_user_profile_view(request):
             return HttpResponseRedirect(reverse('login'))
 
     form = AddUserProfileForm()
-    return render(request, 'generic_form.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
 
 
 @login_required()

@@ -1,0 +1,34 @@
+form {
+  width: 50%;
+}
+
+.register_form_container {
+  border: 5px solid dodgerblue;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register_container {
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+label {
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.weight_input {
+  margin-bottom: 10px;
+}
+
+.register_button {
+  margin-top: 20px;
+  width: 100%;
+}
