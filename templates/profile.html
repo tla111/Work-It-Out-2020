@@ -17,6 +17,8 @@
 
 
     <link rel="stylesheet" href="{% static 'profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'user_info.css' %}" />
+
 
     <title>Profile</title>
   </head>
@@ -28,11 +30,63 @@
     <div class='profile_screen'>
 
     <div class='userinfo_container'>
-      {% include "userinfo.html" %}
-      {% include "motivationpic.html" %}
-      {% include "goals.html" %}
-
+      <div class="card" id="cardPage">
+      <div class="card_side card_side_front">
+        <div class="card_picture card_picture-1"></div>
+        <h4 class="card_heading">
+          <span class="card_heading_span">My Profile</span>
+        </h4>
+        <div class="card_details">
+          <ul>
+            <li>Username: {{user.username}}</li>
+            <li>Age: {{user.age}}</li>
+            <li>Height: {{user.height}}</li>
+            <li>Weight: {{user.weight}}</li>
+            <li>Fitness Level: {{user.fitness_level}}</li>
+            <li>BMI Level: {{name}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card_side card_side_back card_side_back-1">
+        <div class="card_container">
+          <a href="/update_user/" class="btn btn-white"> Update Profile </a>
+        </div>
+      </div>
     </div>
+
+     <div class='card'>
+        <div class='card_side card_picture-2'></div>
+    </div>
+
+    <div class='card' id='cardPage'>
+      <div class='card_side card_side_front'>
+        <div class='card_picture card_picture-3'></div>
+        <h4 class='card_heading'>
+          <span class='card_heading_span heading_span_goals'>
+            My Goals
+          </span>
+        </h4>
+        <div class='card_details'>
+          <ul class='goalList'>
+            <li>Goal 1: {{goals.goal_one}}</li>
+            <li>Goal 2: {{goals.goal_two}}</li>
+            <li>Goal 3: {{goals.goal_three}}</li>
+            <li>Goal 4: {{goals.goal_four}}</li>
+            <li>Goal 5: {{goals.goal_five}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class='card_side card_side_back card_side_back-1'>
+        <div class='card_container goals_buttons_container'>
+          <a href='/add_goals/' class='btn btn-blue create_goals_button'>
+            Create Goals
+          </a>
+          <a href='/update_goals/' class='btn btn-white'>
+            Update Goals
+          </a>
+        </div>
+      </div>
+    </div><!--User Info Container-->
 
 
     </div><!--Profile Screen-->
