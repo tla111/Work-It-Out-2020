@@ -1,5 +1,5 @@
 from django import forms
-from .models import WorkoutUser
+from .models import WorkoutUser, Todos
 
 
 class AddUserProfileForm(forms.Form):
@@ -34,3 +34,13 @@ class UpdateGoalsForm(forms.ModelForm):
         model = WorkoutUser
         fields = ['goal_one', 'goal_two',
                   'goal_three', 'goal_four', 'goal_five']
+
+
+class AddTodosForm(forms.Form):
+    title = forms.CharField(max_length=200)
+
+
+class UpdateTodoForm(forms.ModelForm):
+    class Meta:
+        model = Todos
+        fields = ['title']

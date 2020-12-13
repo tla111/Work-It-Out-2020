@@ -143,6 +143,31 @@
       </div>
     </div><!--BMI Level Container-->
 
+    <div class='todos_container'>
+        <div class='todos_header_container'>
+        <h1 class='todos_header'>Todos List for the Week</h1>
+        <div class='add_todo_container'>
+          <button class='todo_button'>
+            <a href='/add_todos/'>Add Todo</a>
+          </button>
+        </div>
+      </div>
+
+      {% for todo in todos %}
+        <div class='todosList'>
+          <p>{{todo.title}}</p>
+          <div class='todosList_buttons'>
+            <button class='todo_btn-1'>
+              <a href='/update_todos/{{todo.id}}/'>Update Todo</a>
+            </button>
+            <button class='todo_btn-2'>
+              <a href='/remove_todo/{{todo.id}}/'>Delete Todo</a>
+            </button>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div><!--Todos Container-->
 
 
     <!-- Optional JavaScript; choose one of the two! -->
