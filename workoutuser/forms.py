@@ -15,3 +15,9 @@ class AddUserForm(forms.Form):
     height = forms.CharField(max_length=3)
     weight = forms.CharField(max_length=3)
     fitness_level = forms.ChoiceField(choices=FITNESS)
+
+
+class UpdateUserForm(forms.ModelForm):
+    class Meta:
+        model = WorkoutUser
+        fields = ['age', 'height', 'weight', 'fitness_level']

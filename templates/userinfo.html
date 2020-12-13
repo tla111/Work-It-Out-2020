@@ -15,42 +15,32 @@
       crossorigin="anonymous"
     />
 
-
     <link rel="stylesheet" href="{% static 'user_info.css' %}" />
-
   </head>
   <body>
-
-    <div class='card' id='cardPage'>
-        <div class='card_side card_side_front'>
-          <div class='card_picture card_picture-1'></div>
-          <h4 class='card_heading'>
-            <span class='card_heading_span'>My Profile</span>
-          </h4>
-          <div class='card_details'>
-          {% comment %} {% for user in workout_user%} {% endcomment %}
-            <ul>
-              <li>Username: {{user.username}}</li>
-              <li>Age: {{user.age}}</li>
-              <li>Height: {{user.weight}}</li>
-              <li>Weight: {{user.height}}</li>
-              <li>Fitness Level: {{user.fitness_level}} </li>
-              <li>
-                BMI Level:
-              </li>
-            </ul>
-          {% comment %} {% endfor %} {% endcomment %}
-          </div>
-        </div>
-        <div class='card_side card_side_back card_side_back-1'>
-          <div class='card_container'>
-            <a href='#popup1' class='btn btn-white'>
-              Update Profile
-            </a>
-          </div>
+    <div class="card" id="cardPage">
+      <div class="card_side card_side_front">
+        <div class="card_picture card_picture-1"></div>
+        <h4 class="card_heading">
+          <span class="card_heading_span">My Profile</span>
+        </h4>
+        <div class="card_details">
+          <ul>
+            <li>Username: {{user.username}}</li>
+            <li>Age: {{user.age}}</li>
+            <li>Height: {{user.height}}</li>
+            <li>Weight: {{user.weight}}</li>
+            <li>Fitness Level: {{user.fitness_level}}</li>
+            <li>BMI Level:</li>
+          </ul>
         </div>
       </div>
-
+      <div class="card_side card_side_back card_side_back-1">
+        <div class="card_container">
+          <a href="/update_user/" class="btn btn-white"> Update Profile </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

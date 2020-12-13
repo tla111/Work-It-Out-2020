@@ -129,6 +129,7 @@
 .card_details ul li:not(:last-child) {
   border-bottom: 1px solid #dfdcdc;
 }
+
 .card_container {
   height: 400px;
   width: 300px;
@@ -136,7 +137,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 /* .profileUpdate {
   border: 1px solid black;
