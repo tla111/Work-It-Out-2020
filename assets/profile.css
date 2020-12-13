@@ -168,3 +168,35 @@
 .todo_btn-2 {
   background-color: #ff2800;
 }
+
+/*==== Inspire ====*/
+
+.inspired_container {
+  /* border: 1px solid black; */
+  height: 400px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.videos_header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.workout_videos {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+iframe {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+.invisible_border {
+  background-color: white;
+  height: 20px;
+}
