@@ -17,7 +17,7 @@
 
 .bmi_level_container {
   background-color: #222222;
-  height: 350px;
+  height: 360px;
   margin: 20px;
   margin-top: 130px;
   place-items: center;
@@ -26,6 +26,8 @@
 .bmi_level_header {
   color: white;
   text-align: center;
+  position: relative;
+  top: 5px;
 }
 
 .bmi_container {
