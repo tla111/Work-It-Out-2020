@@ -66,3 +66,10 @@ def invalid_workout_view(request, workout_id):
   workout.workout_status = 'Invalid'
   workout.save()
   return redirect(f'/workout_detail/{workout_id}/')
+
+
+@login_required()
+def remove_workout_view(request, workout_id):
+    workout = Workout.objects.get(id=workout_id)
+    workout.delete()
+    return HttpResponseRedirect(reverse("tracker_dashboard"))
