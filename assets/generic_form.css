@@ -1,0 +1,20 @@
+.form_container {
+  background-color: #212528;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_box {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 5px 5px 50px 5px #000000; 
+  box-shadow: 5px 5px 50px 5px #000000;
+}
+
+.submit_btn {
+  width: 100%;
+}
