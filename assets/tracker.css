@@ -22,18 +22,10 @@
 
 .tables_container {
   margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-h3 {
-  margin: 0;
-  padding: 5px;
-  width: 100%;
-  background-color: #003CB3;
-  color: white;
-  padding-left: 10px;
+.card {
+  margin-top: 50px;
 }
 
 .card_body_contain {
@@ -59,15 +51,19 @@ a:visited {
   text-decoration: none;
 }
 .header {
-  background-color: white;
-  height: 30px;
+  background-color: #212528;
+  height: 1px;
   width: 100%;
   margin-bottom: 15px;
 }
-.user_btn {
-  /* color: black !important; */
-}
+
 .user_btn:hover {
   background-color: dodgerblue;
   text-decoration: none;
+}
+
+.tracker_background_image {
+  background-image: url('./images/blackcity.jpg');
+  background-size: cover;
+  height: 93vh;
 }

@@ -19,12 +19,13 @@ button a:visited {
 .button_container button {
   border: none;
   height: 50px;
-  width: 250px;
+  width: 225px;
   margin-bottom: 10px;
 }
 
 .button_container button a {
   color: white;
+  font-size: 15px;
   position: relative;
   top: 1px;
 }

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'authentication',
     'workoutuser',
     'tracker',
+    'social'
 ]
 
 MIDDLEWARE = [
