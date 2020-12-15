@@ -25,51 +25,53 @@
     
     <div class='container_fluid'>
       <div class='row'>
+        
         <div class='col box box1'>
-
-
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 21rem;">
             <img class="card-img-top" src="{% static 'images/AvatarCharacter.png' %}" alt="Hi!" />
             <div class="card-body">
               <h5 class="card-title">@{{user.username}}</h5>
                 Workout for Over 50 Days
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+             <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"></div>
+            </div>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
                 <button class='btn btn-primary'>
-                  <a href=''>Add Message</a>
+                  <a href='/addmessage/'>Add Message</a>
                 </button>
               </li>
-              <li class="list-group-item">Messages: </li>
+              <li class="list-group-item">Posted: {{messages_count}} Messages </li>
               <li class="list-group-item">Following: </li>
             </ul>
           </div>
-        
         </div>
-        {% comment %} <div class='col box'></div> {% endcomment %}
-        <div class='col box box3'>
 
-    
+        <div class='col box box2'>
             {% for message in messages %}
-           <div class="card text-white bg-dark mb-3" style="width: 20rem">
-              <div class="card-header bg-primary">
-                <h3>
-                  @{{message.author}}
-                </h3>
-              </div>
-              <div class="card-body">
-                <h4 class="card-text">
-                  {{message.post}}
-                </h4>
-                <p class="card-title">{{message.time_published}}</p>
-              </div>
-            </div> 
+            <blockquote class="blockquote">
+              <p class="mb-0">{{message.post}}</p>
+              <br>
+              <footer class="blockquote-footer">
+                {{message.time_published}} 
+                <cite title="Source Title">
+                  <a href='/authordetail/{{message.author.id}}'>@{{message.author}}</a>
+                </cite>
+              </footer>
+            </blockquote>
             {% endfor %}
-
         </div>
+
+        <div class='col box box3'>
+          <h1>Workout Users</h1>
+          {% for user in workout_users %}
+            <a href='/authordetail/{{user.id}}'>
+              <h2>@{{user.username}}</h2>
+            </a>
+          {% endfor %}
+        </div>
+
       </div>
     </div>
 
