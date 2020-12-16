@@ -19,7 +19,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from authentication.views import login_view, logout_view
 from workoutuser.views import profile_view, add_user_profile_view, update_profile_view, update_goals_view, add_todo_view, update_todo_view, remove_todo_view
 from tracker.views import dashboard_view, add_workout_view, workout_detail_view, new_workout_view, in_progress_workout_view, done_workout_view, invalid_workout_view, remove_workout_view
-from social.views import social_dashboard_view, author_detail_view, add_tweet_view
+from social.views import social_dashboard_view, author_detail_view, add_tweet_view, user_follow_view, user_unfollow_view
 
 urlpatterns = [
     path('', login_view, name='login'),
@@ -43,6 +43,8 @@ urlpatterns = [
     path('social/', social_dashboard_view, name='social'),
     path('authordetail/<int:author_id>/', author_detail_view),
     path('addmessage/', add_tweet_view),
+    path('followuser/<int:author_id>/', user_follow_view),
+    path('unfollowuser/<int:author_id>/', user_unfollow_view),
     path('admin/', admin.site.urls),
 ]
 

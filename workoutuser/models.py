@@ -26,6 +26,8 @@ class WorkoutUser(AbstractUser):
     goal_four = models.CharField(max_length=200)
     goal_five = models.CharField(max_length=200)
 
+    follow = models.ManyToManyField('self', symmetrical=False, blank=True)
+
     def __str__(self):
         return f"{self.username}"
 

@@ -40,14 +40,14 @@
               <a href=''>Add Message</a>
             </button>
             <button class='btn btn-primary'>
-              <a href=''>Follow</a>
+              <a href='/followuser/{{author.id}}/'>Follow</a>
             </button>
             <button class='btn btn-danger'>
-              <a href=''>Unfollow</a>
+              <a href='/unfollowuser/{{author.id}}/'>Unfollow</a>
             </button>
           </li>
           <li class="list-group-item">Posted: {{author_messages_count}} Messages </li>
-          <li class="list-group-item">Following: </li>
+          <li class="list-group-item">Following: {{follow_count}} User(s)</li>
         </ul>
     </div>
 
