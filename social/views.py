@@ -12,9 +12,16 @@ def social_dashboard_view(request):
     workout_user = WorkoutUser.objects.get(username=request.user)
     workout_users = WorkoutUser.objects.all()
     messages = Message.objects.filter(
-        author=request.user).order_by('-time_published')
+        author=request.user)
     messages_count = Message.objects.filter(author=request.user).all().count()
+    followers = workout_user.follow.all()
     follow_count = workout_user.follow.all().count()
+
+    for f in followers:
+        following_messages = Message.objects.filter(author=f)
+        messages = messages | following_messages
+    messages = messages.order_by('-time_published')
+    
     return render(request, 'social.html', {
         'messages': messages,
         'messages_count': messages_count,
