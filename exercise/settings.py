@@ -25,9 +25,10 @@ SECRET_KEY = 'yu6lw0z^3amg*=&lpxs3v*0x12$aj58ij249(04fs+$(xz^tx@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = ['work-it-out-2020.herokuapp.com',
-                 '127.0.0.1/']
+                 '127.0.0.1']
 
 
 # Application definition
