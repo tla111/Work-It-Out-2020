@@ -13,12 +13,6 @@
   align-items: center;
 }
 
-.scroll_header {
-  color: white;
-  position: absolute;
-  top: 665px;
-}
-
 /*==== BMI ====*/
 
 .bmi_level_container {
